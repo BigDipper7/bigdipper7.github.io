@@ -1,0 +1,1075 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全部应用_迅雷7应用平台</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<!--[if lt IE 7]><script src="js/ie6png.js" language="javascript"></script><![endif]-->
+<script>var xl_gsid='GSID_001_001_001_063';</script>
+<script src='http://res.stat.xunlei.com/pv.js' charset='utf-8'></script>
+<script src="js/Base.js" type="text/javascript"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+try{
+	document.domain="xunlei.com";
+	external.AttachPluginEvent("OnPluginInstall", function(pluginname, version, status){
+		location.reload(true);
+		//getSoftwareStatus('1000000036', 'SinaWeibo', '4.1', 'http://plugin.xl7.xunlei.com/plugins/files/s1303384429623.thunderaddin', '新浪微博');
+	});
+}catch(e){}
+var eleBlocks=Base.extend({
+	blockArr:[],
+	constructor:function(id,ele){
+				var allEs=document.getElementsByTagName(ele);
+					this.blockArr = [];
+				for (var i=0;i<allEs.length ;i++ )
+				{
+					if(allEs[i].id==id){
+						this.blockArr.push(allEs[i]);
+					}
+				}
+	},
+	click:function(fn){
+		for (var i=0;i<this.blockArr.length;i++)
+		{
+			fn.apply(this.blockArr[i]);
+		}
+	},
+	set:function(obj){
+		for (var i=0;i<this.blockArr.length;i++)
+		{
+			for (var o in obj)
+			{
+				this.blockArr[i].o=obj[o];
+				alert(o);
+			};
+		};
+	}
+});
+
+	var allPlugins={};
+	try{
+	document.domain="xunlei.com";
+	external.AttachPluginEvent("OnPluginInstall", function(pluginname, version, status){
+		location.reload(true);
+		//getSoftwareStatus('1000000036', 'SinaWeibo', '4.1', 'http://plugin.xl7.xunlei.com/plugins/files/s1303384429623.thunderaddin', '新浪微博');
+	});
+}catch(e){}
+	function getSoftwareStatus(id, name, version, url, cname,btnID){
+    try{
+	var status = external.GetPluginStatus(name, version);
+	var btn = btnID;
+	btn.enName=name;
+	btn.xmlstr = "<plugin><name>" + name + "</name><cname>" + cname + "</cname><url>" + url + "</url></plugin>"
+	switch(status){
+	case 0 :
+		btn.className = "btn add";
+		btn.style.cursor = "hand";
+		btn.onclick = function(){
+			try{
+			external.InstallPlugin(this.xmlstr);
+			}catch(e){}
+			try{
+			xl_pvManually('http://plugin.xl7.xunlei.com/func/skin?id='+id);
+			}catch(e){}
+			
+		};
+		break;
+	case 1 :
+		try{
+		btn.className = "btn open";
+		btn.style.cursor = "default";
+		btn.onmouseover = function(){}; 
+		btn.onmousedown = function(){}; 
+		btn.onmouseup = function(){}; 
+		btn.onmouseout = function(){}; 
+		btn.onclick = function(){
+			try{
+			external.OpenPlugin(this.enName);
+			}catch(e){}
+		}; 
+		}catch(e){}
+		break;
+	case 2 :
+		btn.className = "btn new";
+		btn.style.cursor = "hand";
+		btn.onclick = function(){
+			try{
+			external.UpdatePlugin(this.xmlstr);
+			}catch(e){}
+			try{
+			xl_pvManually('http://plugin.xl7.xunlei.com/func/skin?id='+id);
+			}catch(e){}
+		};
+		break;
+	default:
+	}
+    }catch(e){}
+}
+/*
+	var allPlugins={'2006':{enName:'UUAddin', version:'1.1', webURL:'http://plugin.xl7.xunlei.com/plugins/files/s1303816243134.thunderaddin',name:'边下边玩'},
+	'2007':{enName:'UUAddin', version:'1.1', webURL:'http://plugin.xl7.xunlei.com/plugins/files/s1303816243134.thunderaddin',name:'边下边玩'}
+	};
+	*/
+//getSoftwareStatus('${soft.getSoftwareid()}', '${soft.getEngname()}', '${soft.getVersionnum()}', '${soft.getFileweburl()}', '${soft.getSoftwarename()}');
+
+
+//-->
+</SCRIPT>
+</head>
+
+<body>
+<div class="wrap">
+<div class="crumb">
+<ul>
+<li class="home"><a title="应用中心" href="http://plugin.xl7.xunlei.com/myapp/pages/index_2.html">应用中心</a></li>
+<li class="last">全部应用</li>
+</ul>
+</div>
+<div class="content">
+<div class="apply">
+<div class="inner">
+<h2>全部应用</h2>
+<div class="list" id="indexTab">
+<h3><a class="on" href="#">最热</a><a href="#">最新</a></h3>
+<ul id="newPluginListUL">
+</ul>
+
+<p class="pages" id="commentPageList"><!-- <a href="#">上一页</a><span>1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a>...<a href="#">33</a><a href="#">下一页</a> --></p>
+</div>
+</div>
+</div>
+<div class="guide"><a class="home" title="应用中心" href="http://plugin.xl7.xunlei.com/myapp/pages/index.html">应用中心</a>全部应用</div>
+<div class="help">
+<dl>
+<dt>论坛</dt>
+<dd><a href="http://helpbbs.xunlei.com/thread.php?fid=138">迅雷7</a></dd>
+<dd><a href="http://helpbbs.xunlei.com/thread.php?fid=147">开放平台讨论区</a></dd>
+</dl>
+<dl>
+<dt>帮助</dt>
+<dd><a href="http://xldoc.xl7.xunlei.com/index.html">开发文档</a></dd>
+<dd><a href="mailto:xl7platform@xunlei.com">联系我们</a></dd>
+</dl>
+</div>
+</div>
+<div class="sidebar">
+<div class="rank weekly">
+<h2>每周排行</h2>
+<div class="con" id="weekScrollDiv">
+<ol>
+<li><em>1.</em><a href="HDDownloadAddin_2.html"><img  class="png" src="http://plugin.xl7.xunlei.com/myapp/images/l1369809471015.png" alt="" /> 免费高清下载</a><span>167289</span><a class="btn add"  href="#" id="plu2000000014">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000014"]={"enName":"HDDownloadAddin", "version":"2.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1357640019005.thunderaddin",name:'免费高清下载'};
+
+</SCRIPT>
+<li><em>2.</em><a href="DownloadSites_2.html"><img  class="png" src="http://plugin.xl7.xunlei.com/myapp/images/l1307953174737.png" alt="" /> 下载站导航</a><span>160230</span><a class="btn add"  href="#" id="plu2000000032">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000032"]={"enName":"DownloadSites", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307953174737.thunderaddin",name:'下载站导航'};
+
+</SCRIPT>
+<li><em>3.</em><a href="AppleAssistant_2.html"><img  class="png" src="http://plugin.xl7.xunlei.com/myapp/images/l1338368998631.png" alt="" /> 无线共享助手</a><span>104513</span><a class="btn add"  href="#" id="plu2000000061">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000061"]={"enName":"AppleAssistant", "version":"2.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1366609019387.thunderaddin",name:'无线共享助手'};
+
+</SCRIPT>
+<li><em>4.</em><a href="KankanAddin_2.html"> 迅雷看看</a><span>98405</span><a class="btn add"  href="#" id="plu2000000007">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000007"]={"enName":"KankanAddin", "version":"2.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307525981848.thunderaddin",name:'迅雷看看'};
+
+</SCRIPT>
+<li><em>5.</em><a href="CloudStorageAddin_2.html"> 迅雷方舟</a><span>74243</span><a class="btn add"  href="#" id="plu2000000042">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000042"]={"enName":"CloudStorageAddin", "version":"1.5", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1347247336281.thunderaddin",name:'迅雷方舟'};
+
+</SCRIPT>
+<li><em>6.</em><a href="FreeUpload_2.html"> 迅雷快传</a><span>52905</span><a class="btn add"  href="#" id="plu2000000010">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000010"]={"enName":"FreeUpload", "version":"2.7", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1324627906841.thunderaddin",name:'迅雷快传'};
+
+</SCRIPT>
+<li><em>7.</em><a href="InternetSpeedRank_2.html"> 宽带排行榜</a><span>44478</span><a class="btn add"  href="#" id="plu2000000003">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000003"]={"enName":"InternetSpeedRank", "version":"3.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306380766786.thunderaddin",name:'宽带排行榜'};
+
+</SCRIPT>
+<li><em>8.</em><a href="VipWebsiteTab_2.html"> 迅雷会员</a><span>42699</span><a class="btn add"  href="#" id="plu2000000022">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000022"]={"enName":"VipWebsiteTab", "version":"2.4", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306745611027.thunderaddin",name:'迅雷会员'};
+
+</SCRIPT>
+<li><em>9.</em><a href="CloudVOD_2.html"> 迅雷播放特权</a><span>40587</span><a class="btn add"  href="#" id="plu2000000071">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000071"]={"enName":"CloudVOD", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1366608979963.thunderaddin",name:'迅雷播放特权'};
+
+</SCRIPT>
+<li><em>10.</em><a href="HotGames_2.html"> 热门小游戏</a><span>39539</span><a class="btn add"  href="#" id="plu2000000028">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000028"]={"enName":"HotGames", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308214909476.thunderaddin",name:'热门小游戏'};
+
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>11.</em><a href="Duote_2.html"> 多特软件站</a><span>39480</span><a class="btn add"  href="#" id="plu2000000051">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000051"]={"enName":"Duote", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310636497942.thunderaddin",name:'多特软件站'};
+
+</SCRIPT>
+<li><em>12.</em><a href="UUAddin_2.html"> 边下边玩</a><span>28651</span><a class="btn add"  href="#" id="plu2000000008">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000008"]={"enName":"UUAddin", "version":"1.3", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306737248739.thunderaddin",name:'边下边玩'};
+
+</SCRIPT>
+<li><em>13.</em><a href="XLaccPage_2.html"> 迅雷网游加速器</a><span>24236</span><a class="btn add"  href="#" id="plu2000000072">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000072"]={"enName":"XLaccPage", "version":"1.2", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1324625747406.thunderaddin",name:'迅雷网游加速器'};
+
+</SCRIPT>
+<li><em>14.</em><a href="TabNewsAddin_2.html"> 新闻</a><span>19231</span><a class="btn add"  href="#" id="plu2000000009">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000009"]={"enName":"TabNewsAddin", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1314586627099.thunderaddin",name:'新闻'};
+
+</SCRIPT>
+<li><em>15.</em><a href="CIDToolAddin_2.html"> 下载地址恢复</a><span>13870</span><a class="btn add"  href="#" id="plu2000000058">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000058"]={"enName":"CIDToolAddin", "version":"2.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1313395776401.thunderaddin",name:'下载地址恢复'};
+
+</SCRIPT>
+<li><em>16.</em><a href="P2pShare_2.html"> 幸福树</a><span>12751</span><a class="btn add"  href="#" id="plu2000000066">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000066"]={"enName":"P2pShare", "version":"3.7", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1361513877451.thunderaddin",name:'幸福树'};
+
+</SCRIPT>
+<li><em>17.</em><a href="JuTao_2.html"> 团购搜索</a><span>11027</span><a class="btn add"  href="#" id="plu2000000023">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000023"]={"enName":"JuTao", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306856530539.thunderaddin",name:'团购搜索'};
+
+</SCRIPT>
+<li><em>18.</em><a href="Beauty_2.html"> 网游美女大全</a><span>10442</span><a class="btn add"  href="#" id="plu2000000037">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000037"]={"enName":"Beauty", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308215306100.thunderaddin",name:'网游美女大全'};
+
+</SCRIPT>
+<li><em>19.</em><a href="OfflineDownloadTab_2.html"> 离线下载</a><span>10208</span><a class="btn add"  href="#" id="plu2000000006">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000006"]={"enName":"OfflineDownloadTab", "version":"2.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306574885852.thunderaddin",name:'离线下载'};
+
+</SCRIPT>
+<li><em>20.</em><a href="DreamLord_2.html"> 梦幻斗地主</a><span>8693</span><a class="btn add"  href="#" id="plu2000000065">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000065"]={"enName":"DreamLord", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1315388489375.thunderaddin",name:'梦幻斗地主'};
+
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>21.</em><a href="MD5CheckerAddin_2.html"> MD5查看器</a><span>8043</span><a class="btn add"  href="#" id="plu2000000057">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000057"]={"enName":"MD5CheckerAddin", "version":"1.4", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1313395245725.thunderaddin",name:'MD5查看器'};
+
+</SCRIPT>
+<li><em>22.</em><a href="RenRen_2.html"> 人人网</a><span>7375</span><a class="btn add"  href="#" id="plu2000000020">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000020"]={"enName":"RenRen", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306224627915.thunderaddin",name:'人人网'};
+
+</SCRIPT>
+<li><em>23.</em><a href="XG000045Addin_2.html"> 迅雷大冲锋</a><span>6753</span><a class="btn add"  href="#" id="plu2000000074">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000074"]={"enName":"XG000045Addin", "version":"1.4", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1326099285058.thunderaddin",name:'迅雷大冲锋'};
+
+</SCRIPT>
+<li><em>24.</em><a href="YiGeMusic_2.html"> 亦歌</a><span>5167</span><a class="btn add"  href="#" id="plu2000000036">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000036"]={"enName":"YiGeMusic", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308215130355.thunderaddin",name:'亦歌'};
+
+</SCRIPT>
+<li><em>25.</em><a href="DouDiZhu_2.html"> 斗地主</a><span>3959</span><a class="btn add"  href="#" id="plu2000000049">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000049"]={"enName":"DouDiZhu", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310636100312.thunderaddin",name:'斗地主'};
+
+</SCRIPT>
+<li><em>26.</em><a href="Tuan_2.html"> 团购导航</a><span>3942</span><a class="btn add"  href="#" id="plu2000000026">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000026"]={"enName":"Tuan", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307951875328.thunderaddin",name:'团购导航'};
+
+</SCRIPT>
+<li><em>27.</em><a href="SkinCenterAddin_2.html"> 皮肤中心</a><span>3928</span><a class="btn add"  href="#" id="plu2000000021">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000021"]={"enName":"SkinCenterAddin", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306750710633.thunderaddin",name:'皮肤中心'};
+
+</SCRIPT>
+<li><em>28.</em><a href="WebsiteEntrance_2.html"> 网址导航</a><span>3774</span><a class="btn add"  href="#" id="plu2000000040">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000040"]={"enName":"WebsiteEntrance", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1309427717615.thunderaddin",name:'网址导航'};
+
+</SCRIPT>
+<li><em>29.</em><a href="XdwanWebgame_2.html"> 火爆网页游戏</a><span>3707</span><a class="btn add"  href="#" id="plu2000000034">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000034"]={"enName":"XdwanWebgame", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308214726127.thunderaddin",name:'火爆网页游戏'};
+
+</SCRIPT>
+<li><em>30.</em><a href="KugouRadio_2.html"> 酷狗电台</a><span>3566</span><a class="btn add"  href="#" id="plu2000000035">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000035"]={"enName":"KugouRadio", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308215017573.thunderaddin",name:'酷狗电台'};
+
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>31.</em><a href="XG000051Addin_2.html"> 卧龙吟</a><span>2905</span><a class="btn add"  href="#" id="plu2000000073">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000073"]={"enName":"XG000051Addin", "version":"1.4", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1330344026800.thunderaddin",name:'卧龙吟'};
+
+</SCRIPT>
+<li><em>32.</em><a href="Express_2.html"> 快递查询</a><span>2442</span><a class="btn add"  href="#" id="plu2000000041">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000041"]={"enName":"Express", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1309429161327.thunderaddin",name:'快递查询'};
+
+</SCRIPT>
+<li><em>33.</em><a href="40407WebGame_2.html"> 40407网页游戏门户</a><span>2361</span><a class="btn add"  href="#" id="plu2000000059">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000059"]={"enName":"40407WebGame", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1313396156300.thunderaddin",name:'40407网页游戏门户'};
+
+</SCRIPT>
+<li><em>34.</em><a href="zonezu_2.html"> 账族免费记账</a><span>2283</span><a class="btn add"  href="#" id="plu2000000029">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000029"]={"enName":"zonezu", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307952674826.thunderaddin",name:'账族免费记账'};
+
+</SCRIPT>
+<li><em>35.</em><a href="XiamiRadio_2.html"> 虾米电台</a><span>2172</span><a class="btn add"  href="#" id="plu2000000031">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000031"]={"enName":"XiamiRadio", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307953044090.thunderaddin",name:'虾米电台'};
+
+</SCRIPT>
+<li><em>36.</em><a href="wgosh_2.html"> 网购生活</a><span>2107</span><a class="btn add"  href="#" id="plu2000000063">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000063"]={"enName":"wgosh", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1314852604288.thunderaddin",name:'网购生活'};
+
+</SCRIPT>
+<li><em>37.</em><a href="I3WebGame_2.html"> 爱上游戏网</a><span>1712</span><a class="btn add"  href="#" id="plu2000000060">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000060"]={"enName":"I3WebGame", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1313460419611.thunderaddin",name:'爱上游戏网'};
+
+</SCRIPT>
+<li><em>38.</em><a href="MovieTicketAddin_2.html"> 折扣电影票</a><span>1653</span><a class="btn add"  href="#" id="plu2000000062">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000062"]={"enName":"MovieTicketAddin", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1314851608560.thunderaddin",name:'折扣电影票'};
+
+</SCRIPT>
+<li><em>39.</em><a href="Snooker_2.html"> 斯诺克</a><span>1210</span><a class="btn add"  href="#" id="plu2000000048">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000048"]={"enName":"Snooker", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310636020830.thunderaddin",name:'斯诺克'};
+
+</SCRIPT>
+<li><em>40.</em><a href="DoubanFM_2.html"> 豆瓣电台</a><span>1112</span><a class="btn add"  href="#" id="plu2000000025">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000025"]={"enName":"DoubanFM", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307951728010.thunderaddin",name:'豆瓣电台'};
+
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>41.</em><a href="ChineseChess_2.html"> 中国象棋</a><span>584</span><a class="btn add"  href="#" id="plu2000000045">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000045"]={"enName":"ChineseChess", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310635578331.thunderaddin",name:'中国象棋'};
+
+</SCRIPT>
+<li><em>42.</em><a href="MyStock_2.html"> 我的股票</a><span>458</span><a class="btn add"  href="#" id="plu2000000038">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000038"]={"enName":"MyStock", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308215411424.thunderaddin",name:'我的股票'};
+
+</SCRIPT>
+<li><em>43.</em><a href="KuXunFlight_2.html"> 酷讯机票</a><span>377</span><a class="btn add"  href="#" id="plu2000000027">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000027"]={"enName":"KuXunFlight", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307952269565.thunderaddin",name:'酷讯机票'};
+
+</SCRIPT>
+<li><em>44.</em><a href="GameBox_2.html"> 迅雷游戏盒子</a><span>0</span><a class="btn add"  href="#" id="plu2000000077">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000077"]={"enName":"GameBox", "version":"1.7", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1382426268938.thunderaddin",name:'迅雷游戏盒子'};
+
+</SCRIPT>
+<li><em>45.</em><a href="InMediaAddin_2.html"> 桌面新闻</a><span>0</span><a class="btn add"  href="#" id="plu2000000090">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000090"]={"enName":"InMediaAddin", "version":"2.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1376034891879.thunderaddin",name:'桌面新闻'};
+
+</SCRIPT>
+<li><em>46.</em><a href="VodRoomXl7_2.html"> 美女直播室</a><span>0</span><a class="btn add"  href="#" id="plu2000000089">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000089"]={"enName":"VodRoomXl7", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1368085664083.thunderaddin",name:'美女直播室'};
+
+</SCRIPT>
+<li><em>47.</em><a href="XLVipBox_2.html"> 远程下载</a><span>0</span><a class="btn add"  href="#" id="plu2000000083">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000083"]={"enName":"XLVipBox", "version":"1.2", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1357720405075.thunderaddin",name:'远程下载'};
+
+</SCRIPT>
+<li><em>48.</em><a href="AccelerateDownZone_2.html"> 加速下载专区</a><span>1</span><a class="btn add"  href="#" id="plu2000000081">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000081"]={"enName":"AccelerateDownZone", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1344393567023.thunderaddin",name:'加速下载专区'};
+
+</SCRIPT>
+<li><em>49.</em><a href="XLDaQuanLeftAddin_2.html"> 迅雷大全</a><span>1</span><a class="btn add"  href="#" id="plu2000000078">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000078"]={"enName":"XLDaQuanLeftAddin", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1338457505968.thunderaddin",name:'迅雷大全'};
+
+</SCRIPT>
+<li><em>50.</em><a href="taotaocan_2.html"> 淘淘看淘宝精选</a><span>0</span><a class="btn add"  href="#" id="plu2000000064">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000064"]={"enName":"taotaocan", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1314853411074.thunderaddin",name:'淘淘看淘宝精选'};
+
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>51.</em><a href="DuiDuiPeng_2.html"> 对对碰</a><span>0</span><a class="btn add"  href="#" id="plu2000000047">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000047"]={"enName":"DuiDuiPeng", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310635875982.thunderaddin",name:'对对碰'};
+
+</SCRIPT>
+<li><em>52.</em><a href="LianLianKan_2.html"> 连连看</a><span>0</span><a class="btn add"  href="#" id="plu2000000046">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+
+	allPlugins["2000000046"]={"enName":"LianLianKan", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310635761738.thunderaddin",name:'连连看'};
+
+</SCRIPT>
+</ol>
+</div>
+<p class="page" id="weekRankPageBtn">																																																				</p>
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	var weekPageIndex=0;
+	var weekPageBtns=document.getElementById('weekRankPageBtn').getElementsByTagName('A');
+	var contents=document.getElementById('weekScrollDiv').getElementsByTagName('OL');
+	var lastPageIndex=0;
+	
+	for (var i=0;i<weekPageBtns.length ;i++ )
+	{
+		weekPageBtns[i].index=i;
+		weekPageBtns[i].show=contents[i];
+		weekPageBtns[i].onclick=function(){
+			if(lastPageIndex==this.index) return false;
+			this.className="on";
+			weekPageBtns[lastPageIndex].className="";
+			contents[lastPageIndex].style.display="none";
+			this.show.style.display="";
+			lastPageIndex=this.index;
+			return false;
+		};
+		weekPageBtns[i].onfocus=function(){
+			this.blur();
+		}
+		weekPageBtns[0].className="on";
+	}
+//-->
+</SCRIPT>
+<div class="rank total">
+<h2>总排行</h2>
+<div class="con" id="totalScrollDiv">
+<ol>
+<li><em>1.</em><a href="HDDownloadAddin_2.html"><img class="png" src="http://plugin.xl7.xunlei.com/myapp/images/l1369809471015.png" alt="" /> 免费高清下载</a><span>167289</span><a class="btn add"  href="#" id="plu2000000014">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000014"]={"enName":"HDDownloadAddin", "version":"2.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1357640019005.thunderaddin",name:'免费高清下载'};
+</SCRIPT>
+<li><em>2.</em><a href="DownloadSites_2.html"><img class="png" src="http://plugin.xl7.xunlei.com/myapp/images/l1307953174737.png" alt="" /> 下载站导航</a><span>160230</span><a class="btn add"  href="#" id="plu2000000032">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000032"]={"enName":"DownloadSites", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307953174737.thunderaddin",name:'下载站导航'};
+</SCRIPT>
+<li><em>3.</em><a href="AppleAssistant_2.html"><img class="png" src="http://plugin.xl7.xunlei.com/myapp/images/l1338368998631.png" alt="" /> 无线共享助手</a><span>104513</span><a class="btn add"  href="#" id="plu2000000061">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000061"]={"enName":"AppleAssistant", "version":"2.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1366609019387.thunderaddin",name:'无线共享助手'};
+</SCRIPT>
+<li><em>4.</em><a href="KankanAddin_2.html"> 迅雷看看</a><span>98405</span><a class="btn add"  href="#" id="plu2000000007">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000007"]={"enName":"KankanAddin", "version":"2.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307525981848.thunderaddin",name:'迅雷看看'};
+</SCRIPT>
+<li><em>5.</em><a href="CloudStorageAddin_2.html"> 迅雷方舟</a><span>74243</span><a class="btn add"  href="#" id="plu2000000042">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000042"]={"enName":"CloudStorageAddin", "version":"1.5", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1347247336281.thunderaddin",name:'迅雷方舟'};
+</SCRIPT>
+<li><em>6.</em><a href="FreeUpload_2.html"> 迅雷快传</a><span>52905</span><a class="btn add"  href="#" id="plu2000000010">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000010"]={"enName":"FreeUpload", "version":"2.7", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1324627906841.thunderaddin",name:'迅雷快传'};
+</SCRIPT>
+<li><em>7.</em><a href="InternetSpeedRank_2.html"> 宽带排行榜</a><span>44478</span><a class="btn add"  href="#" id="plu2000000003">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000003"]={"enName":"InternetSpeedRank", "version":"3.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306380766786.thunderaddin",name:'宽带排行榜'};
+</SCRIPT>
+<li><em>8.</em><a href="VipWebsiteTab_2.html"> 迅雷会员</a><span>42699</span><a class="btn add"  href="#" id="plu2000000022">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000022"]={"enName":"VipWebsiteTab", "version":"2.4", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306745611027.thunderaddin",name:'迅雷会员'};
+</SCRIPT>
+<li><em>9.</em><a href="CloudVOD_2.html"> 迅雷播放特权</a><span>40587</span><a class="btn add"  href="#" id="plu2000000071">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000071"]={"enName":"CloudVOD", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1366608979963.thunderaddin",name:'迅雷播放特权'};
+</SCRIPT>
+<li><em>10.</em><a href="HotGames_2.html"> 热门小游戏</a><span>39539</span><a class="btn add"  href="#" id="plu2000000028">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000028"]={"enName":"HotGames", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308214909476.thunderaddin",name:'热门小游戏'};
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>11.</em><a href="Duote_2.html"> 多特软件站</a><span>39480</span><a class="btn add"  href="#" id="plu2000000051">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000051"]={"enName":"Duote", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310636497942.thunderaddin",name:'多特软件站'};
+</SCRIPT>
+<li><em>12.</em><a href="UUAddin_2.html"> 边下边玩</a><span>28651</span><a class="btn add"  href="#" id="plu2000000008">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000008"]={"enName":"UUAddin", "version":"1.3", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306737248739.thunderaddin",name:'边下边玩'};
+</SCRIPT>
+<li><em>13.</em><a href="XLaccPage_2.html"> 迅雷网游加速器</a><span>24236</span><a class="btn add"  href="#" id="plu2000000072">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000072"]={"enName":"XLaccPage", "version":"1.2", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1324625747406.thunderaddin",name:'迅雷网游加速器'};
+</SCRIPT>
+<li><em>14.</em><a href="TabNewsAddin_2.html"> 新闻</a><span>19231</span><a class="btn add"  href="#" id="plu2000000009">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000009"]={"enName":"TabNewsAddin", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1314586627099.thunderaddin",name:'新闻'};
+</SCRIPT>
+<li><em>15.</em><a href="CIDToolAddin_2.html"> 下载地址恢复</a><span>13870</span><a class="btn add"  href="#" id="plu2000000058">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000058"]={"enName":"CIDToolAddin", "version":"2.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1313395776401.thunderaddin",name:'下载地址恢复'};
+</SCRIPT>
+<li><em>16.</em><a href="P2pShare_2.html"> 幸福树</a><span>12751</span><a class="btn add"  href="#" id="plu2000000066">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000066"]={"enName":"P2pShare", "version":"3.7", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1361513877451.thunderaddin",name:'幸福树'};
+</SCRIPT>
+<li><em>17.</em><a href="JuTao_2.html"> 团购搜索</a><span>11027</span><a class="btn add"  href="#" id="plu2000000023">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000023"]={"enName":"JuTao", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306856530539.thunderaddin",name:'团购搜索'};
+</SCRIPT>
+<li><em>18.</em><a href="Beauty_2.html"> 网游美女大全</a><span>10442</span><a class="btn add"  href="#" id="plu2000000037">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000037"]={"enName":"Beauty", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308215306100.thunderaddin",name:'网游美女大全'};
+</SCRIPT>
+<li><em>19.</em><a href="OfflineDownloadTab_2.html"> 离线下载</a><span>10208</span><a class="btn add"  href="#" id="plu2000000006">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000006"]={"enName":"OfflineDownloadTab", "version":"2.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306574885852.thunderaddin",name:'离线下载'};
+</SCRIPT>
+<li><em>20.</em><a href="DreamLord_2.html"> 梦幻斗地主</a><span>8693</span><a class="btn add"  href="#" id="plu2000000065">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000065"]={"enName":"DreamLord", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1315388489375.thunderaddin",name:'梦幻斗地主'};
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>21.</em><a href="MD5CheckerAddin_2.html"> MD5查看器</a><span>8043</span><a class="btn add"  href="#" id="plu2000000057">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000057"]={"enName":"MD5CheckerAddin", "version":"1.4", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1313395245725.thunderaddin",name:'MD5查看器'};
+</SCRIPT>
+<li><em>22.</em><a href="RenRen_2.html"> 人人网</a><span>7375</span><a class="btn add"  href="#" id="plu2000000020">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000020"]={"enName":"RenRen", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306224627915.thunderaddin",name:'人人网'};
+</SCRIPT>
+<li><em>23.</em><a href="XG000045Addin_2.html"> 迅雷大冲锋</a><span>6753</span><a class="btn add"  href="#" id="plu2000000074">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000074"]={"enName":"XG000045Addin", "version":"1.4", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1326099285058.thunderaddin",name:'迅雷大冲锋'};
+</SCRIPT>
+<li><em>24.</em><a href="YiGeMusic_2.html"> 亦歌</a><span>5167</span><a class="btn add"  href="#" id="plu2000000036">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000036"]={"enName":"YiGeMusic", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308215130355.thunderaddin",name:'亦歌'};
+</SCRIPT>
+<li><em>25.</em><a href="DouDiZhu_2.html"> 斗地主</a><span>3959</span><a class="btn add"  href="#" id="plu2000000049">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000049"]={"enName":"DouDiZhu", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310636100312.thunderaddin",name:'斗地主'};
+</SCRIPT>
+<li><em>26.</em><a href="Tuan_2.html"> 团购导航</a><span>3942</span><a class="btn add"  href="#" id="plu2000000026">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000026"]={"enName":"Tuan", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307951875328.thunderaddin",name:'团购导航'};
+</SCRIPT>
+<li><em>27.</em><a href="SkinCenterAddin_2.html"> 皮肤中心</a><span>3928</span><a class="btn add"  href="#" id="plu2000000021">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000021"]={"enName":"SkinCenterAddin", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1306750710633.thunderaddin",name:'皮肤中心'};
+</SCRIPT>
+<li><em>28.</em><a href="WebsiteEntrance_2.html"> 网址导航</a><span>3774</span><a class="btn add"  href="#" id="plu2000000040">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000040"]={"enName":"WebsiteEntrance", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1309427717615.thunderaddin",name:'网址导航'};
+</SCRIPT>
+<li><em>29.</em><a href="XdwanWebgame_2.html"> 火爆网页游戏</a><span>3707</span><a class="btn add"  href="#" id="plu2000000034">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000034"]={"enName":"XdwanWebgame", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308214726127.thunderaddin",name:'火爆网页游戏'};
+</SCRIPT>
+<li><em>30.</em><a href="KugouRadio_2.html"> 酷狗电台</a><span>3566</span><a class="btn add"  href="#" id="plu2000000035">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000035"]={"enName":"KugouRadio", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308215017573.thunderaddin",name:'酷狗电台'};
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>31.</em><a href="XG000051Addin_2.html"> 卧龙吟</a><span>2905</span><a class="btn add"  href="#" id="plu2000000073">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000073"]={"enName":"XG000051Addin", "version":"1.4", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1330344026800.thunderaddin",name:'卧龙吟'};
+</SCRIPT>
+<li><em>32.</em><a href="Express_2.html"> 快递查询</a><span>2442</span><a class="btn add"  href="#" id="plu2000000041">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000041"]={"enName":"Express", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1309429161327.thunderaddin",name:'快递查询'};
+</SCRIPT>
+<li><em>33.</em><a href="40407WebGame_2.html"> 40407网页游戏门户</a><span>2361</span><a class="btn add"  href="#" id="plu2000000059">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000059"]={"enName":"40407WebGame", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1313396156300.thunderaddin",name:'40407网页游戏门户'};
+</SCRIPT>
+<li><em>34.</em><a href="zonezu_2.html"> 账族免费记账</a><span>2283</span><a class="btn add"  href="#" id="plu2000000029">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000029"]={"enName":"zonezu", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307952674826.thunderaddin",name:'账族免费记账'};
+</SCRIPT>
+<li><em>35.</em><a href="XiamiRadio_2.html"> 虾米电台</a><span>2172</span><a class="btn add"  href="#" id="plu2000000031">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000031"]={"enName":"XiamiRadio", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307953044090.thunderaddin",name:'虾米电台'};
+</SCRIPT>
+<li><em>36.</em><a href="wgosh_2.html"> 网购生活</a><span>2107</span><a class="btn add"  href="#" id="plu2000000063">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000063"]={"enName":"wgosh", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1314852604288.thunderaddin",name:'网购生活'};
+</SCRIPT>
+<li><em>37.</em><a href="I3WebGame_2.html"> 爱上游戏网</a><span>1712</span><a class="btn add"  href="#" id="plu2000000060">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000060"]={"enName":"I3WebGame", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1313460419611.thunderaddin",name:'爱上游戏网'};
+</SCRIPT>
+<li><em>38.</em><a href="MovieTicketAddin_2.html"> 折扣电影票</a><span>1653</span><a class="btn add"  href="#" id="plu2000000062">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000062"]={"enName":"MovieTicketAddin", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1314851608560.thunderaddin",name:'折扣电影票'};
+</SCRIPT>
+<li><em>39.</em><a href="Snooker_2.html"> 斯诺克</a><span>1210</span><a class="btn add"  href="#" id="plu2000000048">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000048"]={"enName":"Snooker", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310636020830.thunderaddin",name:'斯诺克'};
+</SCRIPT>
+<li><em>40.</em><a href="DoubanFM_2.html"> 豆瓣电台</a><span>1112</span><a class="btn add"  href="#" id="plu2000000025">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000025"]={"enName":"DoubanFM", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307951728010.thunderaddin",name:'豆瓣电台'};
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>41.</em><a href="ChineseChess_2.html"> 中国象棋</a><span>584</span><a class="btn add"  href="#" id="plu2000000045">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000045"]={"enName":"ChineseChess", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310635578331.thunderaddin",name:'中国象棋'};
+</SCRIPT>
+<li><em>42.</em><a href="MyStock_2.html"> 我的股票</a><span>458</span><a class="btn add"  href="#" id="plu2000000038">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000038"]={"enName":"MyStock", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1308215411424.thunderaddin",name:'我的股票'};
+</SCRIPT>
+<li><em>43.</em><a href="KuXunFlight_2.html"> 酷讯机票</a><span>377</span><a class="btn add"  href="#" id="plu2000000027">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000027"]={"enName":"KuXunFlight", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1307952269565.thunderaddin",name:'酷讯机票'};
+</SCRIPT>
+<li><em>44.</em><a href="GameBox_2.html"> 迅雷游戏盒子</a><span>0</span><a class="btn add"  href="#" id="plu2000000077">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000077"]={"enName":"GameBox", "version":"1.7", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1382426268938.thunderaddin",name:'迅雷游戏盒子'};
+</SCRIPT>
+<li><em>45.</em><a href="InMediaAddin_2.html"> 桌面新闻</a><span>0</span><a class="btn add"  href="#" id="plu2000000090">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000090"]={"enName":"InMediaAddin", "version":"2.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1376034891879.thunderaddin",name:'桌面新闻'};
+</SCRIPT>
+<li><em>46.</em><a href="VodRoomXl7_2.html"> 美女直播室</a><span>0</span><a class="btn add"  href="#" id="plu2000000089">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000089"]={"enName":"VodRoomXl7", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1368085664083.thunderaddin",name:'美女直播室'};
+</SCRIPT>
+<li><em>47.</em><a href="XLVipBox_2.html"> 远程下载</a><span>0</span><a class="btn add"  href="#" id="plu2000000083">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000083"]={"enName":"XLVipBox", "version":"1.2", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1357720405075.thunderaddin",name:'远程下载'};
+</SCRIPT>
+<li><em>48.</em><a href="AccelerateDownZone_2.html"> 加速下载专区</a><span>1</span><a class="btn add"  href="#" id="plu2000000081">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000081"]={"enName":"AccelerateDownZone", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1344393567023.thunderaddin",name:'加速下载专区'};
+</SCRIPT>
+<li><em>49.</em><a href="XLDaQuanLeftAddin_2.html"> 迅雷大全</a><span>1</span><a class="btn add"  href="#" id="plu2000000078">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000078"]={"enName":"XLDaQuanLeftAddin", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1338457505968.thunderaddin",name:'迅雷大全'};
+</SCRIPT>
+<li><em>50.</em><a href="taotaocan_2.html"> 淘淘看淘宝精选</a><span>0</span><a class="btn add"  href="#" id="plu2000000064">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000064"]={"enName":"taotaocan", "version":"1.0", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1314853411074.thunderaddin",name:'淘淘看淘宝精选'};
+</SCRIPT>
+</ol>
+<ol style="display:none">
+<li><em>51.</em><a href="DuiDuiPeng_2.html"> 对对碰</a><span>0</span><a class="btn add"  href="#" id="plu2000000047">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000047"]={"enName":"DuiDuiPeng", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310635875982.thunderaddin",name:'对对碰'};
+</SCRIPT>
+<li><em>52.</em><a href="LianLianKan_2.html"> 连连看</a><span>0</span><a class="btn add"  href="#" id="plu2000000046">添加</a></li>
+<SCRIPT LANGUAGE="JavaScript">
+	allPlugins["2000000046"]={"enName":"LianLianKan", "version":"1.1", "webURL":"http://plugin.xl7.xunlei.com/myapp/files/s1310635761738.thunderaddin",name:'连连看'};
+</SCRIPT>
+</ol>
+</div>
+<p class="page" id="totalRankPageBtn">																																																				</p>
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	var totalPageIndex=0;
+	var totalPageBtns=document.getElementById('totalRankPageBtn').getElementsByTagName('A');
+	var contents=document.getElementById('totalScrollDiv').getElementsByTagName('OL');
+	var totallastPageIndex=0;
+	
+	for (var i=0;i<totalPageBtns.length ;i++ )
+	{
+		totalPageBtns[i].index=i;
+		totalPageBtns[i].show=contents[i];
+		totalPageBtns[i].onclick=function(){
+			if(totallastPageIndex==this.index) return false;
+			this.className="on";
+			totalPageBtns[totallastPageIndex].className="";
+			contents[totallastPageIndex].style.display="none";
+			this.show.style.display="";
+			totallastPageIndex=this.index;
+			return false;
+		};
+		totalPageBtns[i].onfocus=function(){
+			this.blur();
+		}
+		totalPageBtns[0].className="on";
+	}
+
+	var allPluginList={index:[],datas:{}};
+		allPluginList.index.push("2000000077");
+	allPluginList.datas["2000000077"]={enName:"GameBox", version:"1.7", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1382426268938.thunderaddin",name:"迅雷游戏盒子",description:"一位能够解决你游戏烦恼的助手，轻松多开、便捷小号、一键修复，为你游戏提供全程辅助。",installNum:"0",score:"3.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1368514609975.png",newLevel:"1382426273000",hotLevel:"0",link:"GameBox_2.html"}
+		allPluginList.index.push("2000000090");
+	allPluginList.datas["2000000090"]={enName:"InMediaAddin", version:"2.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1376034891879.thunderaddin",name:"桌面新闻",description:"",installNum:"0",score:"0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1371197578578.png",newLevel:"1376034892000",hotLevel:"0",link:"InMediaAddin_2.html"}
+		allPluginList.index.push("2000000014");
+	allPluginList.datas["2000000014"]={enName:"HDDownloadAddin", version:"2.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1357640019005.thunderaddin",name:"免费高清下载",description:"一网打尽互联网最新最热正版资源，影视、动漫、软件、游戏独家资源免费下载，PC、手机格式自由选择。",installNum:"167289",score:"3.4",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1369809471015.png",newLevel:"1369809471000",hotLevel:"167289",link:"HDDownloadAddin_2.html"}
+		allPluginList.index.push("2000000089");
+	allPluginList.datas["2000000089"]={enName:"VodRoomXl7", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1368085664083.thunderaddin",name:"美女直播室",description:"迅雷美女直播室是迅雷与6间房、新浪秀场、YY等联运的美女互动直播室。互动美女，一网打尽",installNum:"0",score:"0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1368085664083.png",newLevel:"1368514037000",hotLevel:"0",link:"VodRoomXl7_2.html"}
+		allPluginList.index.push("2000000061");
+	allPluginList.datas["2000000061"]={enName:"AppleAssistant", version:"2.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1366609019387.thunderaddin",name:"无线共享助手",description:"移动设备迅雷看看的辅助工具",installNum:"104513",score:"3.4",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1338368998631.png",newLevel:"1366609027000",hotLevel:"104512",link:"AppleAssistant_2.html"}
+		allPluginList.index.push("2000000071");
+	allPluginList.datas["2000000071"]={enName:"CloudVOD", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1366608979963.thunderaddin",name:"迅雷播放特权",description:"迅雷播放特权基于云下载、云转码技术，为您提供稳定、流畅、即点即播的在线播放体验。",installNum:"40587",score:"4.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1330773369662.png",newLevel:"1366608980000",hotLevel:"40587",link:"CloudVOD_2.html"}
+		allPluginList.index.push("2000000066");
+	allPluginList.datas["2000000066"]={enName:"P2pShare", version:"3.7", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1361513877451.thunderaddin",name:"幸福树",description:"迅雷幸福树是记录雷友成长的工具，它将雷友使用迅雷的过程记录下来，就像宠物一样陪伴雷友成长，让您看到自己使用迅雷的点滴。",installNum:"12751",score:"3.4",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1361513877451.png",newLevel:"1361867479000",hotLevel:"12751",link:"P2pShare_2.html"}
+		allPluginList.index.push("2000000083");
+	allPluginList.datas["2000000083"]={enName:"XLVipBox", version:"1.2", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1357720405075.thunderaddin",name:"远程下载",description:"远程下载是一款远程遥控异地迅雷下载器下载任务的下载工具，可以登录yuancheng.xunlei.com给迅雷下载器建立下载任务。比如在公司办公室远程遥控家里的迅雷下载器下载电影，晚上回家就可以观看电影了。",installNum:"0",score:"4.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1357720405075.png",newLevel:"1357720407000",hotLevel:"0",link:"XLVipBox_2.html"}
+		allPluginList.index.push("2000000042");
+	allPluginList.datas["2000000042"]={enName:"CloudStorageAddin", version:"1.5", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1347247336281.thunderaddin",name:"迅雷方舟",description:"可以把迅雷上的文件，快速存入网盘，且可以分享给好友。",installNum:"74243",score:"3.6",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1347247336281.png",newLevel:"1348479742000",hotLevel:"74243",link:"CloudStorageAddin_2.html"}
+		allPluginList.index.push("2000000081");
+	allPluginList.datas["2000000081"]={enName:"AccelerateDownZone", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1344393567023.thunderaddin",name:"加速下载专区",description:"迅雷加速下载专区：每天为您推荐最新最火最高速的下载站点！",installNum:"1",score:"3.7",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1344393567023.png",newLevel:"1344398761000",hotLevel:"1",link:"AccelerateDownZone_2.html"}
+		allPluginList.index.push("2000000078");
+	allPluginList.datas["2000000078"]={enName:"XLDaQuanLeftAddin", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1338457505968.thunderaddin",name:"迅雷大全",description:"迅雷大全荟萃国内多家视频网站、集精准搜索、流畅点播和高清下载为一体，旨在打造互联网最大的影视聚合平台！",installNum:"1",score:"4.6",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1338457505968.png",newLevel:"1338457507000",hotLevel:"1",link:"XLDaQuanLeftAddin_2.html"}
+		allPluginList.index.push("2000000073");
+	allPluginList.datas["2000000073"]={enName:"XG000051Addin", version:"1.4", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1330344026800.thunderaddin",name:"卧龙吟",description:"展开你无尽的三国梦想，驰骋疆场纵横天下，卧龙吟带给你最给力的策略游戏体验。",installNum:"2905",score:"0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1325060976587.png",newLevel:"1330345524000",hotLevel:"2905",link:"XG000051Addin_2.html"}
+		allPluginList.index.push("2000000074");
+	allPluginList.datas["2000000074"]={enName:"XG000045Addin", version:"1.4", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1326099285058.thunderaddin",name:"迅雷大冲锋",description:"次世代3D引擎技术，全新亮丽的画面风格，个性迥异的职业角色，带来不只是枪战的全新感受。",installNum:"6753",score:"0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1326099285058.png",newLevel:"1326099285000",hotLevel:"6753",link:"XG000045Addin_2.html"}
+		allPluginList.index.push("2000000010");
+	allPluginList.datas["2000000010"]={enName:"FreeUpload", version:"2.7", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1324627906841.thunderaddin",name:"迅雷快传",description:"迅雷快传是一款文件分享工具。拥有迅雷创新的极速上传、下载技术，让您分享文件轻松快捷。",installNum:"52905",score:"3.9",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1324627906841.png",newLevel:"1324627906000",hotLevel:"52904",link:"FreeUpload_2.html"}
+		allPluginList.index.push("2000000072");
+	allPluginList.datas["2000000072"]={enName:"XLaccPage", version:"1.2", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1324625747406.thunderaddin",name:"迅雷网游加速器",description:"有效解决网游掉线、卡机、延迟等问题，全方位加速您的游戏体验",installNum:"24236",score:"3.7",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1324625747406.png",newLevel:"1324625747000",hotLevel:"24236",link:"XLaccPage_2.html"}
+		allPluginList.index.push("2000000065");
+	allPluginList.datas["2000000065"]={enName:"DreamLord", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1315388489375.thunderaddin",name:"梦幻斗地主",description:"迅雷梦幻斗地主游戏，无需下载，点开即玩，每天十万游戏玩家在线，乐趣无穷！",installNum:"8693",score:"3.4",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1315388489375.png",newLevel:"1315388489000",hotLevel:"8693",link:"DreamLord_2.html"}
+		allPluginList.index.push("2000000064");
+	allPluginList.datas["2000000064"]={enName:"taotaocan", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1314853411074.thunderaddin",name:"淘淘看淘宝精选",description:"在漫长的下载等待中，享受精选购物，每天更新！",installNum:"0",score:"3.6",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1314853411074.png",newLevel:"1314853411000",hotLevel:"0",link:"taotaocan_2.html"}
+		allPluginList.index.push("2000000063");
+	allPluginList.datas["2000000063"]={enName:"wgosh", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1314852604288.thunderaddin",name:"网购生活",description:"提供网购最便捷的通道，为您收集网购最具优惠与服务的精品店铺，保障您的购物安全与质量。",installNum:"2107",score:"5.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1314852604288.png",newLevel:"1314852604000",hotLevel:"2107",link:"wgosh_2.html"}
+		allPluginList.index.push("2000000062");
+	allPluginList.datas["2000000062"]={enName:"MovieTicketAddin", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1314851608560.thunderaddin",name:"折扣电影票",description:"提供全国上百个城市电影院折扣电影票!",installNum:"1653",score:"0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1314851608560.png",newLevel:"1314851608000",hotLevel:"1653",link:"MovieTicketAddin_2.html"}
+		allPluginList.index.push("2000000009");
+	allPluginList.datas["2000000009"]={enName:"TabNewsAddin", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1314586627099.thunderaddin",name:"新闻",description:"专为迅雷7用户打造的最权威的新闻网站，致力于为用户提供最快捷、最鲜活的资讯。热门",installNum:"19231",score:"2.4",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1311078307242.png",newLevel:"1314586627000",hotLevel:"19230",link:"TabNewsAddin_2.html"}
+		allPluginList.index.push("2000000060");
+	allPluginList.datas["2000000060"]={enName:"I3WebGame", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1313460419611.thunderaddin",name:"爱上游戏网",description:"爱上游戏网提供画面精美，策略丰富的战略游戏，优秀的战争策略将带给您无尽的乐趣。",installNum:"1712",score:"3.8",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1313398178436.png",newLevel:"1313460419000",hotLevel:"1712",link:"I3WebGame_2.html"}
+		allPluginList.index.push("2000000059");
+	allPluginList.datas["2000000059"]={enName:"40407WebGame", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1313396156300.thunderaddin",name:"40407网页游戏门户",description:"找网页游戏，找单机游戏，找小游戏，40407最专业网页游戏门户网站。",installNum:"2361",score:"3.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1313396156300.png",newLevel:"1313396156000",hotLevel:"2361",link:"40407WebGame_2.html"}
+		allPluginList.index.push("2000000058");
+	allPluginList.datas["2000000058"]={enName:"CIDToolAddin", version:"2.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1313395776401.thunderaddin",name:"下载地址恢复",description:"这个工具可以恢复已经在任务列表中删除的但是没有在本地删除的文件的下载地址。",installNum:"13870",score:"3.8",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1313395776401.png",newLevel:"1313395776000",hotLevel:"13870",link:"CIDToolAddin_2.html"}
+		allPluginList.index.push("2000000057");
+	allPluginList.datas["2000000057"]={enName:"MD5CheckerAddin", version:"1.4", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1313395245725.thunderaddin",name:"MD5查看器",description:"查看并验证文件的哈希值，支持MD5和SHA1。",installNum:"8043",score:"4.1",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1313395245725.png",newLevel:"1313395245000",hotLevel:"8043",link:"MD5CheckerAddin_2.html"}
+		allPluginList.index.push("2000000051");
+	allPluginList.datas["2000000051"]={enName:"Duote", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1310636497942.thunderaddin",name:"多特软件站",description:"多特软件站所有软件均通过六大杀毒软件和双重人工检测，百万网民的首选！",installNum:"39480",score:"3.6",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1310636497942.png",newLevel:"1310636497000",hotLevel:"39480",link:"Duote_2.html"}
+		allPluginList.index.push("2000000049");
+	allPluginList.datas["2000000049"]={enName:"DouDiZhu", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1310636100312.thunderaddin",name:"斗地主",description:"一念天堂、一念地狱！全面疯狂斗地主去！牌更好，炸弹更多，玩得更尽兴，让你斗到乐翻",installNum:"3959",score:"3.1",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1310636100312.png",newLevel:"1310636100000",hotLevel:"3959",link:"DouDiZhu_2.html"}
+		allPluginList.index.push("2000000048");
+	allPluginList.datas["2000000048"]={enName:"Snooker", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1310636020830.thunderaddin",name:"斯诺克",description:"亨德利很牛拜？那是因为他没有遇上我，要知道真正的高手都在民间，你敢来挑战我吗？",installNum:"1210",score:"2.8",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1310636020830.png",newLevel:"1310636020000",hotLevel:"1210",link:"Snooker_2.html"}
+		allPluginList.index.push("2000000047");
+	allPluginList.datas["2000000047"]={enName:"DuiDuiPeng", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1310635875982.thunderaddin",name:"对对碰",description:"随着碰撞的火花释放你的激情吧！绚烂的画面，流畅的速度，更为刺激的对战节奏，在这个",installNum:"0",score:"1.7",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1310635875982.png",newLevel:"1310635875000",hotLevel:"0",link:"DuiDuiPeng_2.html"}
+		allPluginList.index.push("2000000046");
+	allPluginList.datas["2000000046"]={enName:"LianLianKan", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1310635761738.thunderaddin",name:"连连看",description:"连着的不仅仅是方块，更是你的好心情！更为可爱的方块们，更为华丽的效果，等你来看！",installNum:"0",score:"4.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1310635761738.png",newLevel:"1310635761000",hotLevel:"0",link:"LianLianKan_2.html"}
+		allPluginList.index.push("2000000045");
+	allPluginList.datas["2000000045"]={enName:"ChineseChess", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1310635578331.thunderaddin",name:"中国象棋",description:"当头炮纯粹出于我的礼貌，开场屏风马，神华内敛才能以柔克刚，你暗箭难防！",installNum:"584",score:"4.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1310635578331.png",newLevel:"1310635578000",hotLevel:"584",link:"ChineseChess_2.html"}
+		allPluginList.index.push("2000000041");
+	allPluginList.datas["2000000041"]={enName:"Express", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1309429161327.thunderaddin",name:"快递查询",description:"友商快递100开发的一站式快递查询服务，涵盖近百家常用快递公司。",installNum:"2442",score:"3.8",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1309429161327.png",newLevel:"1309429161000",hotLevel:"2442",link:"Express_2.html"}
+		allPluginList.index.push("2000000040");
+	allPluginList.datas["2000000040"]={enName:"WebsiteEntrance", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1309427717615.thunderaddin",name:"网址导航",description:"网址导航：提供全能的搜索入口、热门下载站推荐、名站导航、购物和生活便捷入口等上网常用服务。",installNum:"3774",score:"3.7",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1309427717615.png",newLevel:"1309427717000",hotLevel:"3773",link:"WebsiteEntrance_2.html"}
+		allPluginList.index.push("2000000038");
+	allPluginList.datas["2000000038"]={enName:"MyStock", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1308215411424.thunderaddin",name:"我的股票",description:"我的股票是由股城网提供的自选股服务，可添加自己关注的股票，实时掌握数据。",installNum:"458",score:"5.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1308215411424.png",newLevel:"1308215411000",hotLevel:"458",link:"MyStock_2.html"}
+		allPluginList.index.push("2000000037");
+	allPluginList.datas["2000000037"]={enName:"Beauty", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1308215306100.thunderaddin",name:"网游美女大全",description:"汇集流行网游的美女玩家，想认识他们么？快来吧！",installNum:"10442",score:"3.7",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1308215306100.png",newLevel:"1308215306000",hotLevel:"10442",link:"Beauty_2.html"}
+		allPluginList.index.push("2000000036");
+	allPluginList.datas["2000000036"]={enName:"YiGeMusic", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1308215130355.thunderaddin",name:"亦歌",description:"亦歌提供简单、快捷的在线音乐服务，无需操作即可连续不断播放好听的歌曲。",installNum:"5167",score:"4.1",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1308215130355.png",newLevel:"1308215130000",hotLevel:"5167",link:"YiGeMusic_2.html"}
+		allPluginList.index.push("2000000035");
+	allPluginList.datas["2000000035"]={enName:"KugouRadio", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1308215017573.thunderaddin",name:"酷狗电台",description:"酷狗电台是基于酷狗音乐海量的音乐资源以及超火爆榜单开发的网页音乐播放服务。",installNum:"3566",score:"3.8",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1308215017573.png",newLevel:"1308215017000",hotLevel:"3566",link:"KugouRadio_2.html"}
+		allPluginList.index.push("2000000028");
+	allPluginList.datas["2000000028"]={enName:"HotGames", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1308214909476.thunderaddin",name:"热门小游戏",description:"每日精选数十款热门flash小游戏，总有一款适合你，记得常来玩喔！",installNum:"39539",score:"3.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1307952385167.png",newLevel:"1308214909000",hotLevel:"39539",link:"HotGames_2.html"}
+		allPluginList.index.push("2000000034");
+	allPluginList.datas["2000000034"]={enName:"XdwanWebgame", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1308214726127.thunderaddin",name:"火爆网页游戏",description:"经典热门网页游戏,策略/社交/RPG/Q版各种类型应有尽有,不断新增,必须给力!",installNum:"3707",score:"4.7",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1308214726127.png",newLevel:"1308214726000",hotLevel:"3707",link:"XdwanWebgame_2.html"}
+		allPluginList.index.push("2000000032");
+	allPluginList.datas["2000000032"]={enName:"DownloadSites", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1307953174737.thunderaddin",name:"下载站导航",description:"为您精选影视、软件、游戏、书籍等各类热门下载网站，丰富的网络资源让您快乐下不停！",installNum:"160230",score:"3.4",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1307953174737.png",newLevel:"1307953174000",hotLevel:"160230",link:"DownloadSites_2.html"}
+		allPluginList.index.push("2000000031");
+	allPluginList.datas["2000000031"]={enName:"XiamiRadio", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1307953044090.thunderaddin",name:"虾米电台",description:"虾米音乐网基于数百万音乐爱好者试听记录的一键式音乐电台，电台高清音乐曲库达300",installNum:"2172",score:"4.6",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1307953044090.png",newLevel:"1307953044000",hotLevel:"2172",link:"XiamiRadio_2.html"}
+		allPluginList.index.push("2000000029");
+	allPluginList.datas["2000000029"]={enName:"zonezu", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1307952674826.thunderaddin",name:"账族免费记账",description:"账族免费记账，能上网就能记账，最方便最快捷的记账网站，白领个人理财首选网络账本。",installNum:"2283",score:"3.9",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1307952674826.png",newLevel:"1307952674000",hotLevel:"2283",link:"zonezu_2.html"}
+		allPluginList.index.push("2000000027");
+	allPluginList.datas["2000000027"]={enName:"KuXunFlight", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1307952269565.thunderaddin",name:"酷讯机票",description:"酷讯机票搜索，提供各航线特价机票的在线搜索服务。",installNum:"377",score:"3.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1307952269565.png",newLevel:"1307952269000",hotLevel:"377",link:"KuXunFlight_2.html"}
+		allPluginList.index.push("2000000026");
+	allPluginList.datas["2000000026"]={enName:"Tuan", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1307951875328.thunderaddin",name:"团购导航",description:"团购网站层出不穷，迅雷团购导航为迅雷用户提供一站式的导航服务。",installNum:"3942",score:"4.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1307951875328.png",newLevel:"1307951875000",hotLevel:"3942",link:"Tuan_2.html"}
+		allPluginList.index.push("2000000025");
+	allPluginList.datas["2000000025"]={enName:"DoubanFM", version:"1.1", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1307951728010.thunderaddin",name:"豆瓣电台",description:"豆瓣电台，让你和喜欢的音乐不期而遇。",installNum:"1112",score:"4.7",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1307951728010.png",newLevel:"1307951728000",hotLevel:"1112",link:"DoubanFM_2.html"}
+		allPluginList.index.push("2000000007");
+	allPluginList.datas["2000000007"]={enName:"KankanAddin", version:"2.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1307525981848.thunderaddin",name:"迅雷看看",description:"专为迅雷7用户打造，使用迅雷7即可在线点播迅雷看看的海量高清正版影视剧、综艺、动",installNum:"98405",score:"3.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1306766735442.png",newLevel:"1307525981000",hotLevel:"98404",link:"KankanAddin_2.html"}
+		allPluginList.index.push("2000000023");
+	allPluginList.datas["2000000023"]={enName:"JuTao", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1306856530539.thunderaddin",name:"团购搜索",description:"个性化团购搜索引擎，根据个人喜好推荐团购。",installNum:"11027",score:"3.8",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1306844871592.png",newLevel:"1306856530000",hotLevel:"11027",link:"JuTao_2.html"}
+		allPluginList.index.push("2000000021");
+	allPluginList.datas["2000000021"]={enName:"SkinCenterAddin", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1306750710633.thunderaddin",name:"皮肤中心",description:"网友和官方提供的皮肤聚合中心，姹紫嫣红，总有一款适合您",installNum:"3928",score:"3.9",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1306568262748.png",newLevel:"1306750710000",hotLevel:"3927",link:"SkinCenterAddin_2.html"}
+		allPluginList.index.push("2000000022");
+	allPluginList.datas["2000000022"]={enName:"VipWebsiteTab", version:"2.4", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1306745611027.thunderaddin",name:"迅雷会员",description:"迅雷会员尊享在下载、视频、存储、娱乐等多方位互联网生活的20余种精彩特权！",installNum:"42699",score:"3.4",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1306564450461.png",newLevel:"1306745611000",hotLevel:"42699",link:"VipWebsiteTab_2.html"}
+		allPluginList.index.push("2000000008");
+	allPluginList.datas["2000000008"]={enName:"UUAddin", version:"1.3", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1306737248739.thunderaddin",name:"边下边玩",description:"您在等待下载的时候无聊么？这里提供了数百款小游戏，一键可享，轻便快捷。",installNum:"28651",score:"4.0",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1306737248739.png",newLevel:"1306737248000",hotLevel:"28650",link:"UUAddin_2.html"}
+		allPluginList.index.push("2000000006");
+	allPluginList.datas["2000000006"]={enName:"OfflineDownloadTab", version:"2.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1306574885852.thunderaddin",name:"离线下载",description:"离线下载基于强大的迅雷云下载技术，为您提供更快、更稳定、更安全、更省心的下载体验",installNum:"10208",score:"3.9",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1306574885852.png",newLevel:"1306574885000",hotLevel:"10207",link:"OfflineDownloadTab_2.html"}
+		allPluginList.index.push("2000000003");
+	allPluginList.datas["2000000003"]={enName:"InternetSpeedRank", version:"3.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1306380766786.thunderaddin",name:"宽带排行榜",description:"宽带排行榜提供了您所在的地区和全国的宽带排行榜",installNum:"44478",score:"3.2",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1305528217222.png",newLevel:"1306380766000",hotLevel:"44477",link:"InternetSpeedRank_2.html"}
+		allPluginList.index.push("2000000020");
+	allPluginList.datas["2000000020"]={enName:"RenRen", version:"1.0", webURL:"http://plugin.xl7.xunlei.com/myapp/files/s1306224627915.thunderaddin",name:"人人网",description:"中国最大的实名制SNS网站。加入人人网，找到老同学，结识新朋友。",installNum:"7375",score:"3.3",pic:"http://plugin.xl7.xunlei.com/myapp/images/l1306224627915.png",newLevel:"1306224627000",hotLevel:"7375",link:"RenRen_2.html"}
+	
+
+
+	//==========================================
+
+	var currentData=allPluginList;
+	var start=0;
+	var end=0;
+	var perPage=15;
+	function showPage(page){
+		
+		try{
+			if(!currentData) return;
+		}catch(e){
+			return;
+		}
+		if(page<=0) page=1;
+		if(currentData.index.length==0) return;
+		start=(page-1)*perPage;
+		if(start+perPage>currentData.index.length){
+			end=currentData.index.length;
+		}else{
+			end=start+perPage;
+		}
+
+		var html="";
+		for(var i=start;i<end;i++){
+				var idex=currentData.index[i];
+				if(!idex) break;
+				html+='<li><div class="des"><a href="'+currentData.datas[idex].link+'"><img class="png" src="'+currentData.datas[idex].pic+'" alt="" width=52 height=52 /></a><h4><a href="'+currentData.datas[idex].link+'">'+currentData.datas[idex].name+'</a></h4><p>'+currentData.datas[idex].description+'</p></div><div class="ctr"><span class="star s'+parseInt(currentData.datas[idex].score)+'"></span><span class="num">'+currentData.datas[idex].installNum+'</span></div><div class="opt"><a class="btn add" href="#" id="plu'+idex+'">添加</a></div></li>';
+
+		}
+		document.getElementById('newPluginListUL').innerHTML=html;
+
+		//==================show page link=====================
+		totalPage=Math.ceil(currentData.index.length/perPage);
+		//if page is 1  ,return;
+		if(totalPage==1&&0){
+			document.getElementById('commentPageList').innerHTML="";
+			return;
+		}
+		curPage=page;
+		if(curPage%5==0&&curPage<totalPage){
+			startPage=curPage-3;
+		}else if(curPage==totalPage&&totalPage>5){
+			startPage=curPage-5;
+		}else{
+			startPage=1+5*Math.floor((curPage-1)/5);
+		}
+		endPage=startPage+5;
+		
+		var pagels="";
+		for(var pi=startPage;pi<=endPage;pi++){
+			if(pi==curPage){
+				pagels+=("<span>"+pi+"</span>");
+			}else{
+				pagels+="<a href='javascript:showPage("+pi+")' onfocus='this.blur();'>"+pi+"</a>";
+			}
+			if(pi==totalPage){
+				break;
+			}
+		}
+		//======================================
+		var prePage="";
+		if(curPage==1){
+			prePage="";
+		}else{
+			prePage="<a href=\"javascript:showPage("+(curPage-1)+")\" onfocus='this.blur();'>上一页</a>";
+		}
+		//====================================
+		var nextPage="";
+		if(curPage==totalPage){
+			nextPage="";
+		}else{
+			nextPage="<a href=\"javascript:showPage("+(curPage+1)+")\" onfocus='this.blur();'>下一页</a>";
+		}
+		//=====================================
+		var lastPage="<a href=\"javascript:showPage("+totalPage+")\" title=\"最后一页\" onfocus='this.blur();'>...»</a>";
+		//=====================================
+		if(curPage!=1){
+		var firstPage="<a href=\"javascript:showPage(1)\" title=\"第一页\">«...</a>";
+		}else{
+			firstPage="";
+		}
+
+		var pageLink=prePage+pagels+nextPage;
+		document.getElementById('commentPageList').innerHTML=pageLink;
+		refreshStatus();
+	}
+	function hotDesc(x,y)
+	{
+		var xx=parseInt(currentData.datas[x].hotLevel);
+		var yy=parseInt(currentData.datas[y].hotLevel);
+		if(!xx) xx=0;
+		if(!yy) yy=0;
+        if (xx > yy)  
+            return -1;
+        if (xx < yy)          
+            return 1;
+
+			return 0;
+    }
+	function newDesc(x,y)
+	{
+		//alert(currentData.datas[x].newLevel);
+		//return 1;
+		var xx=parseInt(currentData.datas[x].newLevel);
+		var yy=parseInt(currentData.datas[y].newLevel);
+		if(!xx) xx=0;
+		if(!yy) yy=0;
+        if (xx > yy){ 
+            return -1;
+		}
+        if (xx < yy){      
+            return 1;
+		}
+		return 0;
+    }
+	function sortByHotLevel(){
+		currentData.index.sort(hotDesc);
+	}
+
+	function sortByNewLevel(){
+		currentData.index.sort(newDesc);
+	}
+	var tabLis=document.getElementById('indexTab').getElementsByTagName('A');
+	tabLis[0].onfocus=function(){
+		this.blur();
+	}
+	tabLis[1].onfocus=function(){
+		this.blur();
+	}
+	tabLis[0].onclick=function(){
+		tabLis[1].className="";
+		this.className="on";
+		sortByHotLevel();
+		showPage(1);
+	}
+	tabLis[1].onclick=function(){
+		tabLis[0].className="";
+		this.className="on";
+		sortByNewLevel();
+		showPage(1);
+	}
+
+	//========================================
+	var totalPluginLis=document.getElementById('totalScrollDiv').getElementsByTagName('LI');
+	var weekPluginLis=document.getElementById('weekScrollDiv').getElementsByTagName('LI');
+	for (var i=0;i<totalPluginLis.length ;i++ )
+	{
+		totalPluginLis[i].onmouseover=function(){
+			this.className="on";
+		}
+		totalPluginLis[i].onmouseout=function(){
+			this.className="";
+		}
+	}
+	for (var i=0;i<weekPluginLis.length ;i++ )
+	{
+		weekPluginLis[i].onmouseover=function(){
+			this.className="on";
+		}
+		weekPluginLis[i].onmouseout=function(){
+			this.className="";
+		}
+	}
+
+	function updateStatus(){
+		for(var plugin in allPlugins){
+			var btns=new eleBlocks("plu"+plugin,"A");
+			for (var i=0;i<btns.blockArr.length;i++)
+			{
+				getSoftwareStatus(plugin,allPlugins[plugin]['enName'],allPlugins[plugin]['version'],allPlugins[plugin]['webURL'],allPlugins[plugin]['name'],btns.blockArr[i]);
+			}	
+		}
+	}
+
+	//==========================================================
+	//刷新应用状态
+	//==========================================================
+	function refreshStatus(){
+		for(var i=start;i<end;i++){
+			var iid=currentData.index[i];
+			var plugin=currentData.datas[iid];
+			var btns=new eleBlocks("plu"+iid,"A");
+			for (var j=0;j<btns.blockArr.length;j++)
+			{
+			getSoftwareStatus(plugin,currentData.datas[iid]['enName'],currentData.datas[iid]['version'],currentData.datas[iid]['webURL'],currentData.datas[iid]['name'],btns.blockArr[j]);
+			}
+		}
+	}
+
+
+	sortByHotLevel();
+	showPage(1);
+	updateStatus();
+//-->
+</SCRIPT>
+</div>
+</div>
+</body>
+</html>
