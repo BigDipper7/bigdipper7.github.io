@@ -2,7 +2,7 @@ var SLIDE_CONFIG = {
   // Slide settings
   settings: {
     title: 'Googo',
-    subtitle: 'Proposal Presentation for Java EE Course',
+    subtitle: 'Middle Term Presentation for Java EE Course',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
