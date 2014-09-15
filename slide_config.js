@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Googo',
-    subtitle: 'Middle Term Presentation for Java EE Course',
+    title: 'Google Camp<br>我们来招新啦~',
+    subtitle: 'For A Better Future  --- Autumn 2014',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
@@ -21,13 +21,14 @@ var SLIDE_CONFIG = {
   },
 
   // Author information
+  
   presenters: [{
-    name: 'Team Gcers',
-    company: 'Google Camp',
-    gplus: '',
-    twitter: '',
-    www: '',
-    github: ''
+    name: 'Google Camp',
+    company: '<br>济事楼 518',
+    register: 'http://goo.gl/ugycq9',
+    qq: '161346387',
+    renren: '同济谷歌营',
+    weixin: 'GoogleCamp'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
@@ -37,4 +38,3 @@ var SLIDE_CONFIG = {
     github: 'http://github.com/you'
   }*/]
 };
-

@@ -355,8 +355,18 @@ SlideDeck.prototype.loadConfig_ = function(config) {
 
       var github = p.github ? '<span>github</span><a href="' + p.github +
           '">' + p.github.replace(/https?:\/\//, '') + '</a>' : '';
+		  
+      var qq = p.qq ? '<span>qq群</span>' +
+          '<a href="http://twitter.com/' + p.qq + '">' + '   ' + 
+          p.qq + '</a>' : '';
 
-      var html2 = [gplus, twitter, www, github].join('<br>');
+      var renren = p.renren ? '<span>人人</span><a href="' + p.renren +
+                        '">' + '   ' + p.renren.replace(/https?:\/\//, '') + '</a>' : '';
+
+      var weixin = p.weixin ? '<span>微信</span><a href="' + p.weixin +
+      '">' + '   ' + p.weixin.replace(/https?:\/\//, '') + '</a>' : '';
+
+      var html2 = [gplus, twitter, www, github, qq, renren, weixin].join('<br>');
 
       if (dataConfigContact) {
         dataConfigContact.innerHTML = html2;
