@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Google Camp<br>我们来招新啦~',
-    subtitle: 'For A Better Future  --- Autumn 2014',
+    title: 'Google Camp<br>俱乐部宣讲',
+    subtitle: 'Touch Google, Touch Future <br>  --- September 2014',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
@@ -21,10 +21,10 @@ var SLIDE_CONFIG = {
   },
 
   // Author information
-  
+
   presenters: [{
     name: 'Google Camp',
-    company: '<br>济事楼 518',
+    company: '济事楼 518',
     register: 'http://goo.gl/ugycq9',
     qq: '161346387',
     renren: '同济谷歌营',
